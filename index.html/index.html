@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CampusHub</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+/* Background */
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: url('image.jpg.jpeg') no-repeat center/cover;
+}
+
+/* Container */
+.container{
+  width:350px;
+  background:rgba(255,255,255,0.95);
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Top Banner */
+.banner{
+  background:url('photo.jpeg') no-repeat center/cover;
+  color:white;
+  padding:20px;
+}
+
+.banner h2{
+  font-size:22px;
+}
+
+.banner p{
+  font-size:13px;
+}
+
+/* Form */
+.form{
+  padding:20px;
+  text-align:center;
+}
+
+.form h2{
+  margin-bottom:10px;
+}
+
+/* Input */
+.input-box{
+  display:flex;
+  align-items:center;
+  border:1px solid #ccc;
+  border-radius:25px;
+  padding:10px;
+  margin:10px 0;
+}
+
+.input-box i{
+  margin-right:10px;
+  color:#05082b;
+  font-size:20px;
+}
+
+.input-box input{
+  border:none;
+  outline:none;
+  width:100%;
+}
+
+/* Button */
+.btn{
+  width:100%;
+  padding:10px;
+  background:#1a136d;
+  border:none;
+  color:white;
+  border-radius:25px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.btn:hover{
+  background:#0f1a6a;
+}
+
+/* Links */
+.link{
+  margin-top:10px;
+  font-size:14px;
+}
+
+.link a{
+  color:#171e5c;
+  text-decoration:none;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* Hide */
+.hidden{
+  display:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Banner -->
+  <div class="banner">
+    <h2>Welcome To CampusHub</h2>
+    <p>Smart Student Platform</p>
+  </div>
+
+  <!-- LOGIN -->
+  <div class="form" id="loginForm">
+    <h4>Login to your Account</h4>
+
+    <div class="input-box">
+      <i class="fa fa-user"></i>
+      <input type="text" placeholder="Username">
+    </div>
+
+    <div class="input-box">
+      <i class="fa fa-key"></i>
+      <input type="password" placeholder="Password">
+    </div>
+
+
+    <button class="btn">LOGIN</button>
+        <div class="Forgot">
+      <a href="forgot.html">Forgot Password?</a>
+    </div>
+
+    <p class="link">
+      Don't have an account? 
+      <a onclick="showSignup()">Sign Up</a>
+    </p>
+  </div>
+
+  <!-- SIGNUP -->
+  <div class="form hidden" id="signupForm">
+    <h2>Create Account</h2>
+
+    <div class="input-box">
+      <i class="fa fa-user"></i>
+      <input type="text" placeholder="Full Name">
+    </div>
+
+    <div class="input-box">
+      <i class="fa fa-envelope"></i>
+      <input type="email" placeholder="Email">
+    </div>
+
+    <div class="input-box">
+      <i class="fa fa-key"></i>
+      <input type="password" placeholder="Password">
+    </div>
+
+    <div class="input-box">
+      <i class="fa fa-key"></i>
+      <input type="password" placeholder="Confirm Password">
+    </div>
+
+    <button class="btn">SIGN UP</button>
+
+    <p class="link">
+      Already have an account? 
+      <a onclick="showLogin()">Login</a>
+    </p>
+  </div>
+
+</div>
+
+<script>
+function showSignup(){
+  document.getElementById("loginForm").classList.add("hidden");
+  document.getElementById("signupForm").classList.remove("hidden");
+}
+
+function showLogin(){
+  document.getElementById("signupForm").classList.add("hidden");
+  document.getElementById("loginForm").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
